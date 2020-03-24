@@ -60,7 +60,7 @@ public class CrackSleeve {
         // 获取jar文件中sleeve文件夹下的文件列表
         try {
             String path = this.getClass().getClassLoader().getResource("sleeve").getPath();
-            String jarPath = path.substring(6,path.indexOf("!/"));
+            String jarPath = path.substring(5,path.indexOf("!/"));
             Enumeration<JarEntry> jarEnum = new JarFile(new File(jarPath)).entries();
             while (jarEnum.hasMoreElements())
             {
